@@ -29,7 +29,7 @@ void test_klist_iterate() {
   t3.list.prev = &t2.list;
 
   int i = 1;
-  KLIST_ITERATE(&t1.list, test, list)
+  KLIST_ITERATE(&t1.list, test, list){
       if (data->v != i)
           fail("test_klist_iterate", "unexpected data->v");
       i++;
